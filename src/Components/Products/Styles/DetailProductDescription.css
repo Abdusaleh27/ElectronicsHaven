@@ -1,0 +1,30 @@
+.thumbnail {
+  background-color: white;
+}
+.thumbnail:hover {
+  border: 3px solid black;
+}
+.big_image {
+  border: none;
+  background-color: white;
+}
+.no-bullet {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.detailed-product-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(40, 85, 168);
+}
+.detailed-product-title {
+  margin-top: 90px;
+}
+.each{
+  display: block;
+  color:brown;
+  font-size:10px;
+  padding-left: 5px;
+  margin-top: -5px;
+}

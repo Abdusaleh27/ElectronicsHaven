@@ -1,70 +1,27 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# This project was created, coded and designed by Abdullah Saleh as a capstone project for
+# Front-End web development SpringBoard bootcamp
 
-## Available Scripts
+Course completion certificate: https://www.credential.net/0298e623-488c-47d6-88a2-e51615b7adcb#gs.3houbr
+Deployed project: 
+LinkedIn: https://www.linkedin.com/in/ahsaleh27/
 
-In the project directory, you can run:
+### Project Features
 
-### `npm start`
+1. Built an e-commerce platform that utilizes Best Buy's API to provide real-time product listings according
+   to user searches.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Created dynamic customer experiences by showcasing the most viewed and trending products on the landing page.
+   Implemented many features such adding and removing products from shopping cart and wish list, displaying product details,
+   search filters, and sorting search results by price or customer rating.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Used React for building the front end along with Material UI for a responsive, dynamic, and visually appealing website.
 
-### `npm test`
+4. Used AWS Amplify functionalities such as Cognito for creating and authenticating users, Graphql and DynamoDB for storing
+   customer’s data, and implemented Express RESTful APIs secured by AWS IAM roles for interacting with Best Buy and Stripe
+   APIs in the back end eliminating the exposure of secret API keys.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Integrated a secure payment gateway using Stripe for a seamless checkout.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+6. Addressed Best Buy API’s product search limitations by enhancing search functionality using search filters and sorting options,
+   significantly improving the accuracy of search results, and enhancing the overall user’s experience.

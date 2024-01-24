@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "paths": {
+    "/items": {
+      "name": "/items",
+      "lambdaFunction": "BBProductAPI",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "read",
+          "update"
+        ],
+        "guest": [
+          "read",
+          "update"
+        ]
+      }
+    }
+  }
+}

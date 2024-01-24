@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-capstone-dev-210825-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637113619423:role/amplify-capstone-dev-210825-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637113619423:role/amplify-capstone-dev-210825-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-capstone-dev-210825-deployment",
+      "UnauthRoleName": "amplify-capstone-dev-210825-unauthRole",
+      "StackName": "amplify-capstone-dev-210825",
+      "StackId": "arn:aws:cloudformation:us-west-1:637113619423:stack/amplify-capstone-dev-210825/30a9c1a0-51eb-11ee-9e53-0252deb8564d",
+      "AmplifyAppId": "d1uglx461g8eue",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-capstone-dev-210825-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "capstone7ca0f31f": {
+          "googleClientId": "176022151685-2056b0ptqmbll2aco396r3rohv6r587e.apps.googleusercontent.com"
+        }
+      },
+      "api": {
+        "userDataAPI": {},
+        "stripepayment": {},
+        "BBProductAPI": {}
+      },
+      "function": {
+        "stripepayment": {
+          "deploymentBucketName": "amplify-capstone-dev-210825-deployment",
+          "s3Key": "amplify-builds/stripepayment-313433776e34397a6576-build.zip"
+        },
+        "BBProductAPI": {
+          "deploymentBucketName": "amplify-capstone-dev-210825-deployment",
+          "s3Key": "amplify-builds/BBProductAPI-7847647442676c6b2f73-build.zip"
+        }
+      }
+    }
+  }
+}

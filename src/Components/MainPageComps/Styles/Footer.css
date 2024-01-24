@@ -1,0 +1,18 @@
+.wrapper {
+  padding-bottom: 220px;
+}
+.main-footer {
+  position: absolute;
+  bottom: -15px;
+  height: 220px;
+  width: 100%;
+  background-color: black;
+  color: "white";
+}
+
+.footer-link {
+  color: white;
+}
+.footer-link:hover {
+  color: white;
+}

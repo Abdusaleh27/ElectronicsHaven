@@ -1,0 +1,22 @@
+.review-count {
+  font-size: 12px;
+  font-weight: 500;
+}
+.price {
+  font-weight: bold;
+  font-size: 13px;
+}
+.product-name {
+  font-size: 17px;
+}
+.striked-price {
+  color: rgb(205, 4, 4);
+  font-style: italic;
+  text-decoration: double line-through;
+  padding-right: 5px;
+}
+.process {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
