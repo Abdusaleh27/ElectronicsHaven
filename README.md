@@ -1,9 +1,12 @@
 
-# This project was created, coded and designed by Abdullah Saleh as a capstone project for
+# This project was created, coded and designed by:
+# Abdullah Saleh as a capstone project for
 # Front-End web development SpringBoard bootcamp
 
 Course completion certificate: https://www.credential.net/0298e623-488c-47d6-88a2-e51615b7adcb#gs.3houbr
+
 Deployed project: 
+
 LinkedIn: https://www.linkedin.com/in/ahsaleh27/
 
 ### Project Features
