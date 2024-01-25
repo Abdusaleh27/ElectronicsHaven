@@ -69,7 +69,7 @@ const BannerSlider = () => {
           paddingBottom: targetBreakPoint ? "20px" : "70px",
           marginTop:
             (targetBreakPoint && "-70px") ||
-            (lgBreakPoint && "51") ||
+            (lgBreakPoint && "51px") ||
             (xlBreakPoint && "51px") ||
             (xxlBreakPoint && "51px"),
           width: "100%",
@@ -103,7 +103,13 @@ const BannerSlider = () => {
                 color="#ff4d02"
                 textAlign={"left"}
                 marginBottom={"15px"}
-                fontSize={mobileBreakPoint && 22}
+                fontSize={
+                  (mobileBreakPoint && "20px") ||
+                  (targetBreakPoint && "22px") ||
+                  (lgBreakPoint && "21px") ||
+                  (xlBreakPoint && " 24px") ||
+                  (xxlBreakPoint && "25px")
+                }
               >
                 Check out our Huge Collection
               </Typography>
@@ -112,10 +118,9 @@ const BannerSlider = () => {
                 color={"white"}
                 textAlign={"left"}
                 marginBottom={targetBreakPoint ? "" : "40px"}
-                fontSize={targetBreakPoint && 16}
+                fontSize={targetBreakPoint ? 13 : 17}
               >
-                Discover the latest and greatest electronics at{" "}
-                <span className="">Electronics Haven</span>. From smartphones to
+                Discover the latest and greatest electronics from smartphones to
                 laptops, we have everything you need to stay connected and
                 entertained.
               </Typography>
@@ -123,11 +128,11 @@ const BannerSlider = () => {
                 variant="body2"
                 color={"darkorange"}
                 textAlign={"left"}
-                marginBottom={targetBreakPoint ? "" : "40px"}
-                fontSize={22}
-                mt={3}
+                marginBottom={targetBreakPoint ? "" : "18px"}
+                fontSize={targetBreakPoint ? 15 : 19}
+                mt={1}
               >
-                Coded and Designed by: Abdullah Saleh
+                By Abdullah Saleh
               </Typography>
             </Box>
           </Grid>
@@ -159,7 +164,7 @@ const BannerSlider = () => {
                     } d-flex col-6`}
                   >
                     <Box
-                      maxWidth={(lgBreakPoint && "160px") || "200px"}
+                      maxWidth={(lgBreakPoint && "150px") || "180px"}
                       className={`herobanner-image ${shiny ? "wrap" : ""}`}
                       padding={"10px"}
                       marginBottom={"25px"}
@@ -181,7 +186,7 @@ const BannerSlider = () => {
                     } d-flex col-6`}
                   >
                     <Box
-                      maxWidth={(lgBreakPoint && "140px") || "170px"}
+                      maxWidth={(lgBreakPoint && "120px") || "150px"}
                       className={`herobanner-image ${shiny2 ? "wrap" : ""}`}
                       padding={"15px"}
                     >
@@ -204,7 +209,7 @@ const BannerSlider = () => {
                     } d-flex col-6`}
                   >
                     <Box
-                      maxWidth={(lgBreakPoint && "150px") || "210px"}
+                      maxWidth={(lgBreakPoint && "150px") || "190px"}
                       className={`herobanner-image ${shiny2 ? "wrap" : ""}`}
                       padding={"15px"}
                     >
@@ -225,7 +230,7 @@ const BannerSlider = () => {
                     } d-flex col-6`}
                   >
                     <Box
-                      maxWidth={(lgBreakPoint && "175px") || "250px"}
+                      maxWidth={(lgBreakPoint && "175px") || "270px"}
                       className={`herobanner-image ${shiny ? "wrap" : ""}`}
                       padding={"10px"}
                       paddingTop={"25px"}

@@ -26,7 +26,7 @@
       "function": {
         "stripepayment": {
           "deploymentBucketName": "amplify-capstone-dev-210825-deployment",
-          "s3Key": "amplify-builds/stripepayment-313433776e34397a6576-build.zip"
+          "s3Key": "amplify-builds/stripepayment-78705056694e43743844-build.zip"
         },
         "BBProductAPI": {
           "deploymentBucketName": "amplify-capstone-dev-210825-deployment",

@@ -85,7 +85,7 @@ const Contact = () => {
             borderRadius: "10px",
           }}
         >
-          <Typography variant="h4" align="center" mb={2}>
+          <Typography variant="h6" align="center" mb={2}>
             Contact Us
           </Typography>
           <form onSubmit={handleSubmit} ref={form}>

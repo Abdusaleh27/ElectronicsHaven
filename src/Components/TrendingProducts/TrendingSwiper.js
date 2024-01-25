@@ -75,7 +75,7 @@ const TrendingSwiper = ({ trendType = "mostViewed", description }) => {
   return (
     <>
       <Box margin={targetBreakPoint ? "50px -4%" : "50px 0"}>
-        <Container maxWidth="50 vw">
+        <Container maxWidth="50 vw" sx={{paddingX: targetBreakPoint && "25px"}}>
           <Paper
             square
             elevation={0}
@@ -101,7 +101,7 @@ const TrendingSwiper = ({ trendType = "mostViewed", description }) => {
               breakpoints={{
                 0: {
                   width: 350,
-                  slidesPerView: 2,
+                  slidesPerView: 1.5,
                 },
                 500: {
                   width: 500,
@@ -109,7 +109,7 @@ const TrendingSwiper = ({ trendType = "mostViewed", description }) => {
                 },
                 768: {
                   width: 768,
-                  slidesPerView: 2,
+                  slidesPerView: 3,
                 },
               }}
             >
@@ -119,14 +119,20 @@ const TrendingSwiper = ({ trendType = "mostViewed", description }) => {
               <div className="swiper-button-next">
                 <ArrowForwardIosOutlinedIcon />
               </div>
-              <Grid container spacing={1}>
+              <Grid container spacing={1} >
                 {data &&
                   data.results.map((product, index) => (
                     <SwiperSlide key={index}>
                       <Paper
-                        elevation={4}
+                        elevation={5}
                         square={false}
-                        sx={{ marginLeft: "5px", p: 1, height: 400, mb: 1 }}
+                        sx={{
+                          marginLeft: "5px",
+                          p: 1,
+                          height: 400,
+                          mb: 1,
+                          maxWidth: "350px",
+                        }}
                       >
                         <Grid
                           container
@@ -162,7 +168,7 @@ const TrendingSwiper = ({ trendType = "mostViewed", description }) => {
                                     className={`product-name ${
                                       smallBreakPoint
                                         ? "trending-product-name"
-                                        : ""
+                                        : "swiper-product-name"
                                     }`}
                                   >
                                     {product.names.title}

@@ -64,6 +64,8 @@ const HamburgerMenu = () => {
       <Drawer open={open} onClose={() => setOpen(false)}>
         <Box sx={{ textAlign: "center", width: 250 }}>
           <List>
+            <ListItem disablePadding><ListItemButton></ListItemButton></ListItem>
+            <ListItem disablePadding><ListItemButton></ListItemButton></ListItem>
             {navItems.map((item) => (
               <Fragment key={UUID()}>
                 <ListItem disablePadding>
@@ -71,7 +73,7 @@ const HamburgerMenu = () => {
                     sx={{ textAlign: "center" }}
                     onClick={handleClick}
                   >
-                    <ListItemText primary={item} />
+                    <ListItemText primary={item}  primaryTypographyProps={{fontSize: '19px'}} />
                   </ListItemButton>
                 </ListItem>
               </Fragment>

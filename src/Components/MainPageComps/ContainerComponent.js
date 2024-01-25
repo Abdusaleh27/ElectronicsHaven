@@ -24,6 +24,8 @@ import Contact from "../Contact/Contact";
 import About from "../About/About";
 import Redirect from "../Athentications/Redirect";
 import "../NavigationBar/Styles/NavigationBar.css";
+import PageNotFound from "../PageNotFound/PageNotFound";
+
 const ContainerComponent = () => {
   /** Hooks */
   const { authStatus } = useAuthenticator((context) => [context.user]);
@@ -249,17 +251,17 @@ const ContainerComponent = () => {
 
                 <Routes>
                   <Route path="/" element={<MainPage />} />
-                  <Route path="/search/:name" element={<SearchPage />} />
+                  <Route path="/search/:name/" element={<SearchPage />} />
                   <Route
-                    path="/productdetails/:name"
+                    path="/productdetails/:name/"
                     element={<DetailedProductDescription />}
                   />
                   <Route
-                    path="/wishlist"
+                    path="/wishlist/"
                     element={<WishList combined={combined} />}
                   />
                   <Route
-                    path="/shoppingcart"
+                    path="/shoppingcart/"
                     element={
                       <ShoppingCart
                         checkOutSession={checkOutSession}
@@ -271,17 +273,18 @@ const ContainerComponent = () => {
                     }
                   />
                   <Route
-                    path="/success-page"
+                    path="/success-page/"
                     element={<CheckOutPage setCartCount={setCartCount} />}
                   />
 
                   <Route
-                    path="/login"
+                    path="/login/"
                     element={<LoginPage makeNewDataEntry={makeNewDataEntry} />}
                   />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/redirect" element={<Redirect />} />
+                  <Route path="/contact/" element={<Contact />} />
+                  <Route path="/about/" element={<About />} />
+                  <Route path="/redirect/" element={<Redirect />} />
+                  <Route path="*" element={<PageNotFound />} />
                 </Routes>
                 <div className="wrapper">
                   <Footer></Footer>

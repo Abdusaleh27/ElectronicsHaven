@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
 //stripe payment
 app.use(express.static("public"));
 
-const YOUR_DOMAIN = "http://localhost:3000";
+const YOUR_DOMAIN = "https://main.d1uglx461g8eue.amplifyapp.com";
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 app.post("/stripepayment", async function (req, res) {

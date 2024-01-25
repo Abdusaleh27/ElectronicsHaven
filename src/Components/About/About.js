@@ -15,22 +15,20 @@ const About = () => {
         }}
       >
         <Card>
-          <CardHeader
-            color="text.primary"
-            title="About Me"
-            titleTypographyProps={{
-              variant: "body1",
-              fontWeight: "bold",
-              color: "brown",
-            }}
-          />
+          <Typography
+            variant="subtitle2"
+            marginBottom={"20px"}
+            sx={{ fontSize: "20px", color: "brown", fontWeight: "bold" }}
+          >
+            About me
+          </Typography>
           <CardContent>
             <Typography
               variant="subtitle2"
               color="text.secondary"
               textAlign={"start"}
               marginBottom={"5px"}
-              sx={{ fontSize: "20px" }}
+              sx={{ fontSize: "17px" }}
             >
               Hello, I'm Abdullah Saleh, I would like to thank you for your
               interest to learn more about me and my project. I am a front-end
@@ -42,7 +40,7 @@ const About = () => {
               color="text.secondary"
               textAlign={"start"}
               marginBottom={"20px"}
-              sx={{ fontSize: "20px" }}
+              sx={{ fontSize: "17px" }}
             >
               I'm eager to bring my problem-solving mindset and front-end
               development skills to a team to create dynamic, user friendly and
@@ -61,7 +59,7 @@ const About = () => {
                   variant="subtitle2"
                   color="text.secondary"
                   textAlign={"start"}
-                  sx={{ fontSize: "20px" }}
+                  sx={{ fontSize: "17px" }}
                 >
                   Built an e-commerce platform that utilizes Best Buy's API to
                   provide real-time product listings according to user searches.
@@ -72,7 +70,7 @@ const About = () => {
                   variant="subtitle2"
                   color="text.secondary"
                   textAlign={"start"}
-                  sx={{ fontSize: "20px" }}
+                  sx={{ fontSize: "17px" }}
                 >
                   Created dynamic customer experiences by showcasing the most
                   viewed and trending products on the landing page.
@@ -83,7 +81,7 @@ const About = () => {
                   variant="subtitle2"
                   color="text.secondary"
                   textAlign={"start"}
-                  sx={{ fontSize: "20px" }}
+                  sx={{ fontSize: "17px" }}
                 >
                   Implemented many features such adding and removing products
                   from shopping cart and wish list, displaying product details,
@@ -96,7 +94,7 @@ const About = () => {
                   variant="subtitle2"
                   color="text.secondary"
                   textAlign={"start"}
-                  sx={{ fontSize: "20px" }}
+                  sx={{ fontSize: "17px" }}
                 >
                   Used React for building the front end along with Material UI
                   for a responsive, dynamic, and visually appealing website.
@@ -107,7 +105,7 @@ const About = () => {
                   variant="subtitle2"
                   color="text.secondary"
                   textAlign={"start"}
-                  sx={{ fontSize: "20px" }}
+                  sx={{ fontSize: "17px" }}
                 >
                   Used AWS Amplify functionalities such as Cognito for creating
                   and authenticating users, Graphql and DynamoDB for storing
@@ -121,7 +119,7 @@ const About = () => {
                   variant="subtitle2"
                   color="text.secondary"
                   textAlign={"start"}
-                  sx={{ fontSize: "20px" }}
+                  sx={{ fontSize: "17px" }}
                 >
                   Integrated a secure payment gateway using Stripe for a
                   seamless checkout.
@@ -132,7 +130,7 @@ const About = () => {
                   variant="subtitle2"
                   color="text.secondary"
                   textAlign={"start"}
-                  sx={{ fontSize: "20px" }}
+                  sx={{ fontSize: "17px" }}
                 >
                   Addressed Best Buy API’s product search limitations by
                   enhancing search functionality using search filters and
@@ -141,7 +139,7 @@ const About = () => {
                 </Typography>
               </li>
             </ul>
-            <h6>Let's innovate together!</h6>
+            <h5>Let's innovate together!</h5>
           </CardContent>
         </Card>
       </Box>

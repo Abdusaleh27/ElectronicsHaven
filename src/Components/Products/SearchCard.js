@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import BriefProductDescription from "./BriefProductDescription";
 import ProductPrice from "./ProductPrice";
 import { Link } from "react-router-dom";
-import { Button, Grid, IconButton, Paper } from "@mui/material";
+import {
+  Button,
+  Grid,
+  IconButton,
+  Paper,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import "./Styles/ProductCardStyles.css";
 import {
   Favorite,
@@ -18,6 +25,9 @@ const SearchCard = ({
   isOverLimit,
 }) => {
   const [hovering, setHovering] = useState(false);
+  const theme = useTheme();
+  const targetBreakPoint = useMediaQuery(theme.breakpoints.down("md"));
+
   const handleWishList = () => {
     wishListclicked();
   };
@@ -37,7 +47,7 @@ const SearchCard = ({
         onMouseLeave={handleEnter}
       >
         <Grid container spacing={2}>
-          <Grid item xs={4}>
+          <Grid item xs={targetBreakPoint ? 6 : 4}>
             {product && (
               <Link
                 to={`/productdetails/${(product.name + "sku" + product.sku)
@@ -46,17 +56,17 @@ const SearchCard = ({
               >
                 <img
                   className="img-fluid search-image mb-1"
-                  src={product.image + ";maxHeight=200;maxWidth=300"}
+                  src={product.image + ";maxHeight=160;maxWidth=260"}
                   alt="product"
                 />
               </Link>
             )}
           </Grid>
 
-          <Grid item xs={4}>
+          <Grid item xs={targetBreakPoint ? 6 : 4}>
             <BriefProductDescription product={product} />
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={targetBreakPoint ? 12 : 4}>
             <ProductPrice product={product} />
 
             <Button
@@ -83,7 +93,6 @@ const SearchCard = ({
           </Grid>
         </Grid>
       </Paper>
-      
     </>
   );
 };

@@ -94,7 +94,7 @@ const TrendingTable = ({
   }, [retry]);
   return (
     <Box margin={targetBreakPoint ? "50px -4%" : "50px 0"}>
-      <Container maxWidth="50 vw">
+      <Container maxWidth="50 vw" sx={{ paddingX: targetBreakPoint && "25px" }}>
         <Paper
           square={square}
           elevation={elevation}
@@ -150,13 +150,13 @@ const TrendingTable = ({
                             <img
                               src={
                                 product.images?.standard +
-                                ";maxHeight=350;maxWidth=200"
+                                ";maxHeight=160;maxWidth=200"
                               }
                               alt="product"
                               className="img-fluid"
                             />
                             <div className="trending-product-name">
-                            <p></p>
+                              <p></p>
                               <p className="product-name trending-product-name">
                                 {product.names?.title}
                               </p>
