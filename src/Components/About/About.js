@@ -1,5 +1,6 @@
-import { Box, Card, CardContent, CardHeader, Typography } from "@mui/material";
+import { Box, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -20,7 +21,15 @@ const About = () => {
             marginBottom={"20px"}
             sx={{ fontSize: "20px", color: "brown", fontWeight: "bold" }}
           >
-            About me
+            About me (
+            <Link
+              to="https://www.linkedin.com/in/ahsaleh27/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </Link>
+            )
           </Typography>
           <CardContent>
             <Typography
@@ -51,7 +60,15 @@ const About = () => {
               marginBottom={"20px"}
               sx={{ fontSize: "20px", color: "brown", fontWeight: "bold" }}
             >
-              About the project
+              About the project (
+              <Link
+                to="https://github.com/Abdusaleh27/ElectronicsHaven"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GIT
+              </Link>
+              )
             </Typography>
             <ul>
               <li>

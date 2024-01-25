@@ -9,11 +9,15 @@ import { Rating } from "react-simple-star-rating";
 const BriefProductDescription = ({ product }) => {
   return (
     <>
-      <Link to={`/productdetails/${(product.name + "sku" + product.sku).split("/").join()}`}>
-        <p className="product-name">{product.name}</p>
+      <Link
+        to={`/productdetails/${(product.name + "sku" + product.sku)
+          .split("/")
+          .join()}`}
+      >
+        <p className="product-name swiper-product-name">{product.name}</p>
       </Link>
 
-      <p  className="product-line">
+      <p className="product-line">
         <span className="product-info-title">SKU:</span>{" "}
         <span className="product-info">{product.sku} </span>
       </p>
@@ -45,7 +49,10 @@ const BriefProductDescription = ({ product }) => {
               allowFraction
               readonly={true}
             />
-            <small className="review-count"> ({product.customerReviewCount}) </small>
+            <small className="review-count">
+              {" "}
+              ({product.customerReviewCount}){" "}
+            </small>
           </>
         )}
       </p>

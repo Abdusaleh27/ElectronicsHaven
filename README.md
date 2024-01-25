@@ -5,7 +5,7 @@
 
 Course completion certificate: https://www.credential.net/0298e623-488c-47d6-88a2-e51615b7adcb#gs.3houbr
 
-Deployed project: 
+Deployed project: https://www.electronicshaven.net/
 
 LinkedIn: https://www.linkedin.com/in/ahsaleh27/
 
