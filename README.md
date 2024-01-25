@@ -1,5 +1,5 @@
 
-# This project was created, coded and designed by 
+# This project was created, coded and designed by:
 # Abdullah Saleh as a capstone project for
 # Front-End web development SpringBoard bootcamp
 
@@ -28,3 +28,4 @@ LinkedIn: https://www.linkedin.com/in/ahsaleh27/
 
 6. Addressed Best Buy API’s product search limitations by enhancing search functionality using search filters and sorting options,
    significantly improving the accuracy of search results, and enhancing the overall user’s experience.
+
