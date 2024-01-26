@@ -1,5 +1,5 @@
 .trending-header {
-  color: rgb(61, 116, 155);
+  color: #3d749b;
 }
 .swiper-container {
   width: 400px;
@@ -46,6 +46,5 @@
 }
 
 .small-product-card2:hover {
-  
   opacity: 0.85;
 }

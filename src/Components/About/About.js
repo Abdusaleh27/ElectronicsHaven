@@ -18,20 +18,29 @@ const About = () => {
         <Card>
           <Typography
             variant="subtitle2"
+            marginTop={"25px"}
             marginBottom={"20px"}
-            sx={{ fontSize: "20px", color: "brown", fontWeight: "bold" }}
+            sx={{ fontSize: "20px", color: "#3d749b", fontWeight: "bold" }}
           >
-            About me (
-            <Link
-              to="https://www.linkedin.com/in/ahsaleh27/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </Link>
-            )
+            About me
           </Typography>
+
           <CardContent>
+            <Typography
+              variant="subtitle2"
+              color="text.secondary"
+              textAlign={"start"}
+              marginBottom={"5px"}
+              sx={{ fontSize: "17px", fontWeight: "bold" }}
+            >
+              <Link
+                to="https://www.linkedin.com/in/ahsaleh27/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Check my LinkedIn
+              </Link>
+            </Typography>
             <Typography
               variant="subtitle2"
               color="text.secondary"
@@ -58,17 +67,23 @@ const About = () => {
             <Typography
               variant="subtitle2"
               marginBottom={"20px"}
-              sx={{ fontSize: "20px", color: "brown", fontWeight: "bold" }}
+              sx={{ fontSize: "20px", color: "#3d749b", fontWeight: "bold" }}
             >
-              About the project (
+              About the project
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              color="text.secondary"
+              textAlign={"start"}
+              sx={{ fontSize: "17px", fontWeight: "bold" }}
+            >
               <Link
                 to="https://github.com/Abdusaleh27/ElectronicsHaven"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GIT
+                Project repository git
               </Link>
-              )
             </Typography>
             <ul>
               <li>

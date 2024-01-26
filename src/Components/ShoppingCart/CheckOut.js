@@ -23,7 +23,7 @@ const CheckOut = ({
           marginBottom: "5px",
           paddingBottom: "10px",
           paddingTop: "10px",
-          backgroundColor: "ButtonShadow",
+          backgroundColor: "#F0F0F0",
         }}
       >
         <div className="row">

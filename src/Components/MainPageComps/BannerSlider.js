@@ -66,12 +66,11 @@ const BannerSlider = () => {
     <>
       <Box
         sx={{
-          paddingBottom: targetBreakPoint ? "20px" : "70px",
+          paddingBottom: targetBreakPoint ? "10px" : "20px",
           marginTop:
-            (targetBreakPoint && "-70px") ||
-            (lgBreakPoint && "51px") ||
-            (xlBreakPoint && "51px") ||
-            (xxlBreakPoint && "51px"),
+            (targetBreakPoint && "-80px") ||
+            
+            (xxlBreakPoint && "21px"),
           width: "100%",
           backgroundImage: `url(${heroBG3})`,
           backgroundSize: "100% 100%",
@@ -126,7 +125,7 @@ const BannerSlider = () => {
               </Typography>
               <Typography
                 variant="body2"
-                color={"darkorange"}
+                color={"#f38842"}
                 textAlign={"left"}
                 marginBottom={targetBreakPoint ? "" : "18px"}
                 fontSize={targetBreakPoint ? 15 : 19}
@@ -164,7 +163,7 @@ const BannerSlider = () => {
                     } d-flex col-6`}
                   >
                     <Box
-                      maxWidth={(lgBreakPoint && "150px") || "180px"}
+                      maxWidth={(xlBreakPoint && "110px") || "180px"}
                       className={`herobanner-image ${shiny ? "wrap" : ""}`}
                       padding={"10px"}
                       marginBottom={"25px"}
@@ -186,7 +185,7 @@ const BannerSlider = () => {
                     } d-flex col-6`}
                   >
                     <Box
-                      maxWidth={(lgBreakPoint && "120px") || "150px"}
+                      maxWidth={(xlBreakPoint && "100px") || "150px"}
                       className={`herobanner-image ${shiny2 ? "wrap" : ""}`}
                       padding={"15px"}
                     >
@@ -209,7 +208,7 @@ const BannerSlider = () => {
                     } d-flex col-6`}
                   >
                     <Box
-                      maxWidth={(lgBreakPoint && "150px") || "190px"}
+                      maxWidth={(xlBreakPoint && "140px") || "190px"}
                       className={`herobanner-image ${shiny2 ? "wrap" : ""}`}
                       padding={"15px"}
                     >
@@ -230,7 +229,7 @@ const BannerSlider = () => {
                     } d-flex col-6`}
                   >
                     <Box
-                      maxWidth={(lgBreakPoint && "175px") || "270px"}
+                      maxWidth={(xlBreakPoint && "165px") || "270px"}
                       className={`herobanner-image ${shiny ? "wrap" : ""}`}
                       padding={"10px"}
                       paddingTop={"25px"}

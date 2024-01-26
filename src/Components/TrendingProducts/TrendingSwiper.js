@@ -75,12 +75,15 @@ const TrendingSwiper = ({ trendType = "mostViewed", description }) => {
   return (
     <>
       <Box margin={targetBreakPoint ? "50px -4%" : "50px 0"}>
-        <Container maxWidth="50 vw" sx={{paddingX: targetBreakPoint && "25px"}}>
+        <Container
+          maxWidth="50 vw"
+          sx={{ paddingX: targetBreakPoint && "25px" }}
+        >
           <Paper
             square
             elevation={0}
             sx={{
-              backgroundColor: "ButtonShadow",
+              backgroundColor: "#F0F0F0",
               p: 1,
               margin: `0 ${lgBreakPoint ? "2.4vw" : ""}`,
               padding: "40px 10px",
@@ -119,7 +122,7 @@ const TrendingSwiper = ({ trendType = "mostViewed", description }) => {
               <div className="swiper-button-next">
                 <ArrowForwardIosOutlinedIcon />
               </div>
-              <Grid container spacing={1} >
+              <Grid container spacing={1}>
                 {data &&
                   data.results.map((product, index) => (
                     <SwiperSlide key={index}>

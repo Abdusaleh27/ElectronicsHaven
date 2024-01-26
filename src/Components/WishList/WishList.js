@@ -57,7 +57,7 @@ const WishList = ({ combined, rerender, setRerender }) => {
       if (authStatus === "authenticated") {
         const userData = await API.graphql(graphqlOperation(listUserLists));
         const data = userData.data.listUserLists.items;
-        
+
         setUserLists([...data]);
         wishListData = data[0]?.wishList ? JSON.parse(data[0]?.wishList) : [];
       } else if (localStorage.getItem("EHAlluserLists")) {
@@ -79,7 +79,6 @@ const WishList = ({ combined, rerender, setRerender }) => {
     fetchUserData();
   };
 
-  
   const updateDetailFavorite = (isFavored) => {
     return isFavored;
   };
@@ -91,7 +90,7 @@ const WishList = ({ combined, rerender, setRerender }) => {
             <Paper
               square
               elevation={0}
-              sx={{ backgroundColor: "ButtonShadow", p: 1,paddingBottom:"30px" }}
+              sx={{ backgroundColor: "#F0F0F0", p: 1, paddingBottom: "30px" }}
             >
               <h4 className="trending-header mb-4 mt-2">Wish List</h4>
               <Grid container spacing={2} direction="row">
