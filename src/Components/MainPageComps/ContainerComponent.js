@@ -212,88 +212,98 @@ const ContainerComponent = () => {
   };
   return (
     <>
-      <div className="row justify-content-center">
-        <Box maxWidth={3000}>
-          {openSnackBar && (
-            <Snackbar
-              sx={{ maxWidth: "200px" }}
-              anchorOrigin={{ vertical: "top", horizontal: "center" }}
-              open={openSnackBar}
-              autoHideDuration={1000}
-              key={"topcenter"}
-              onClose={handleClose}
-            >
-              {addingToCart ? (
-                <Alert
-                  severity="success"
-                  sx={{ width: "100%" }}
-                  variant="filled"
+      <Grid container sx={{ overflowX: "hidden !important" }}>
+        <Grid item xs={12}>
+          <div className="row justify-content-center main-container">
+            <Box maxWidth={3000}>
+              {openSnackBar && (
+                <Snackbar
+                  sx={{ maxWidth: "200px" }}
+                  anchorOrigin={{ vertical: "top", horizontal: "center" }}
+                  open={openSnackBar}
+                  autoHideDuration={1000}
+                  key={"topcenter"}
+                  onClose={handleClose}
                 >
-                  Item added
-                </Alert>
-              ) : (
-                <Alert severity="error" sx={{ width: "100%" }} variant="filled">
-                  Item removed
-                </Alert>
+                  {addingToCart ? (
+                    <Alert
+                      severity="success"
+                      sx={{ width: "100%" }}
+                      variant="filled"
+                    >
+                      Item added
+                    </Alert>
+                  ) : (
+                    <Alert
+                      severity="error"
+                      sx={{ width: "100%" }}
+                      variant="filled"
+                    >
+                      Item removed
+                    </Alert>
+                  )}
+                </Snackbar>
               )}
-            </Snackbar>
-          )}
-          <UserDataContext.Provider
-            value={{
-              countCartItems,
-              emptyCart,
-              updateEmptyCart,
-            }}
-          >
-            <BrowserRouter>
-              <>
-                <NavigationBar cartCount={cartCount} />
+              <UserDataContext.Provider
+                value={{
+                  countCartItems,
+                  emptyCart,
+                  updateEmptyCart,
+                }}
+              >
+                <BrowserRouter>
+                  <>
+                    <NavigationBar cartCount={cartCount} />
 
-                <Routes>
-                  <Route path="/" element={<MainPage />} />
-                  <Route path="/search/:name/" element={<SearchPage />} />
-                  <Route
-                    path="/productdetails/:name/"
-                    element={<DetailedProductDescription />}
-                  />
-                  <Route
-                    path="/wishlist/"
-                    element={<WishList combined={combined} />}
-                  />
-                  <Route
-                    path="/shoppingcart/"
-                    element={
-                      <ShoppingCart
-                        checkOutSession={checkOutSession}
-                        updateCheckOutSession={updateCheckOutSession}
-                        combined={combined}
-                        rerender={rerender}
-                        setRerender={setRerender}
+                    <Routes>
+                      <Route path="/" element={<MainPage />} />
+                      <Route path="/search/:name/" element={<SearchPage />} />
+                      <Route
+                        path="/productdetails/:name/"
+                        element={<DetailedProductDescription />}
                       />
-                    }
-                  />
-                  <Route
-                    path="/success-page/"
-                    element={<CheckOutPage setCartCount={setCartCount} />}
-                  />
+                      <Route
+                        path="/wishlist/"
+                        element={<WishList combined={combined} />}
+                      />
+                      <Route
+                        path="/shoppingcart/"
+                        element={
+                          <ShoppingCart
+                            checkOutSession={checkOutSession}
+                            updateCheckOutSession={updateCheckOutSession}
+                            combined={combined}
+                            rerender={rerender}
+                            setRerender={setRerender}
+                          />
+                        }
+                      />
+                      <Route
+                        path="/success-page/"
+                        element={<CheckOutPage setCartCount={setCartCount} />}
+                      />
 
-                  <Route
-                    path="/login/"
-                    element={<LoginPage makeNewDataEntry={makeNewDataEntry} />}
-                  />
-                  <Route path="/contact/" element={<Contact />} />
-                  <Route path="/about/" element={<About />} />
-                  <Route path="/redirect/" element={<Redirect />} />
-                  <Route path="*" element={<PageNotFound />} />
-                </Routes>
-                <div className="wrapper">
-                  <Footer></Footer>
-                </div>
-              </>
-            </BrowserRouter>
-          </UserDataContext.Provider>
-        </Box>
-      </div>
+                      <Route
+                        path="/login/"
+                        element={
+                          <LoginPage makeNewDataEntry={makeNewDataEntry} />
+                        }
+                      />
+                      <Route path="/contact/" element={<Contact />} />
+                      <Route path="/about/" element={<About />} />
+                      <Route path="/redirect/" element={<Redirect />} />
+                      <Route path="*" element={<PageNotFound />} />
+                    </Routes>
+                    <div className="wrapper row ">
+                      <Footer></Footer>
+                    </div>
+                  </>
+                </BrowserRouter>
+              </UserDataContext.Provider>
+            </Box>
+          </div>
+        </Grid>
+      </Grid>
     </>
   );
 };

@@ -31,7 +31,7 @@ const CheckOutPage = ({ setCartCount }) => {
   };
   useEffect(() => {
     //verfies the user was redericted by stripe and payment was accepted.
-    // After the initial message session expires up refreshing or navigating
+    // After the initial message, the session expires when refreshing or navigating
     // back to this session link so this session can't be used again for checkout
 
     const session_id = param.split("=")[1];
@@ -121,7 +121,7 @@ const CheckOutPage = ({ setCartCount }) => {
                 ) : (
                   <Paper
                     sx={{
-                      background: "buttonshadow",
+                      background: "#F0F0F0",
                       text: "white",
                       paddingY: "25px",
                       width: "450px",
@@ -133,7 +133,7 @@ const CheckOutPage = ({ setCartCount }) => {
                           sx={{
                             fontSize: "20px",
                             fontWeight: "bold",
-                            color: "brown",
+                            color: "#3471ca",
                           }}
                         >
                           {" "}
