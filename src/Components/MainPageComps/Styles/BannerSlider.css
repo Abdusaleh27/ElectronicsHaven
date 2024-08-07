@@ -3,14 +3,15 @@
 }
 .herobanner-image:hover {
   background-color: rgba(0, 0, 0, 0.487);
+  color:#ffbb01;
   border-radius: 25px;
 }
-
 .wrap {
   display: inline-block;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
+  color:rgb(5, 84, 129);
 }
 .wrap:before {
   content: "";
@@ -51,4 +52,10 @@
 }
 .underheroText {
   text-wrap: nowrap;
+}
+.tv{
+  margin-left: -50px;
+}
+.special-links{
+  text-decoration: underline;
 }

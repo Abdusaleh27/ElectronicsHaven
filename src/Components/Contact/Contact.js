@@ -18,7 +18,7 @@ import emailjs from "@emailjs/browser";
  */
 const Contact = () => {
   /**
-   * Stats
+   * States
    */
   const form = useRef();
   const [formData, setFormData] = useState({

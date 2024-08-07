@@ -29,20 +29,20 @@ const HeroSwiper = () => {
     <div className="row mx-3 mt-3">
       <Carousel responsive={responsive}>
         <Box maxWidth={"120px"} className={`herobanner-image`} padding={"10px"}>
-          <Link to="productdetails/sku6560070">
-            <img src={heroIMTP1} className="img-fluid" alt="hero1"></img>
+          <Link to="productdetails/sku6560081">
+            <img src={heroIMTP1} className="img-fluid" alt="applewatch"></img>
           </Link>
         </Box>
 
         <Box maxWidth={"100px"} className={`herobanner-image`} padding={"15px"}>
-          <Link to="productdetails/sku6543821">
-            <img src={heroIMTP3} className="img-fluid" alt="hero2"></img>
+          <Link to="productdetails/sku6562707">
+            <img src={heroIMTP3} className="img-fluid" alt="steelseries"></img>
           </Link>
         </Box>
 
         <Box maxWidth={"150px"} className={`herobanner-image`} padding={"15px"}>
-          <Link to="productdetails/sku6512838">
-            <img src={heroIMTP2} className="img-fluid" alt="hero2"></img>
+          <Link to="productdetails/sku6586745">
+            <img src={heroIMTP2} className="img-fluid" alt="galaxyfold"></img>
           </Link>
         </Box>
 
@@ -53,7 +53,7 @@ const HeroSwiper = () => {
           marginTop={"15px"}
         >
           <Link to="productdetails/sku6536964">
-            <img src={heroIMTP4} className="img-fluid" alt="hero2"></img>
+            <img src={heroIMTP4} className="img-fluid" alt="tv"></img>
           </Link>
         </Box>
       </Carousel>

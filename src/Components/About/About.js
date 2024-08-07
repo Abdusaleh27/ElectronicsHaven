@@ -1,8 +1,16 @@
+import { ArrowBack, ArrowUpward } from "@mui/icons-material";
 import { Box, Card, CardContent, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const About = () => {
+  const icon = {
+    hidden: {},
+    visible: {
+      x: [-10, 0, 10, 0],
+    },
+  };
   return (
     <>
       <Box
@@ -31,60 +39,64 @@ const About = () => {
               color="text.secondary"
               textAlign={"start"}
               marginBottom={"5px"}
-              sx={{ fontSize: "17px", fontWeight: "bold" }}
-            >
-              <Link
-                to="https://www.linkedin.com/in/ahsaleh27/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Check my LinkedIn
-              </Link>
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              color="text.secondary"
-              textAlign={"start"}
-              marginBottom={"5px"}
               sx={{ fontSize: "17px" }}
             >
               Hello, I'm Abdullah Saleh, I would like to thank you for your
               interest to learn more about me and my project. I am a front-end
               web developer who recently completed a very rigorous boot camp and
-              gained expertise in HTML, CSS, JavaScriptand React.
+              gained expertise in HTML, CSS, JavaScript and React.
             </Typography>
             <Typography
               variant="subtitle2"
               color="text.secondary"
               textAlign={"start"}
               marginBottom={"20px"}
-              sx={{ fontSize: "17px" }}
+              sx={{
+                display: "inline-block",
+                fontSize: "19px",
+                fontWeight: "bold",
+                color: "#055481",
+                marginTop: "30px",
+                marginBottom: "0",
+              }}
             >
-              I'm eager to bring my problem-solving mindset and front-end
-              development skills to a team to create dynamic, user friendly and
-              impactful web applications.
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              marginBottom={"20px"}
-              sx={{ fontSize: "20px", color: "#3d749b", fontWeight: "bold" }}
-            >
-              About the project
-            </Typography>
-            <Typography
-              variant="subtitle2"
-              color="text.secondary"
-              textAlign={"start"}
-              sx={{ fontSize: "17px", fontWeight: "bold" }}
-            >
+              Please visit my
               <Link
-                to="https://github.com/Abdusaleh27/ElectronicsHaven"
+                to="https://abdullahsaleh.electronicshaven.net"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Project repository git
-              </Link>
+                <span className="special-links"> Portfolio Website</span>
+              </Link>{" "}
             </Typography>
+            <motion.div
+              variants={icon}
+              animate={{
+                x: [0, 75, 75, 75, 150, 150, 75, 75, 0],
+                opacity: [
+                  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+                  1, 1, 1, 1, 1, 0,
+                ],
+              }}
+              transition={{ duration: 15, ease: "easeInOut" }}
+            >
+              <ArrowUpward />
+            </motion.div>
+           
+            <Typography
+              variant="subtitle2"
+              marginBottom={"20px"}
+              sx={{
+                marginTop: "20px",
+                fontSize: "20px",
+                color: "#3d749b",
+                fontWeight: "bold",
+              }}
+            >
+              About the project
+            </Typography>
+
             <ul>
               <li>
                 <Typography
@@ -171,6 +183,26 @@ const About = () => {
                 </Typography>
               </li>
             </ul>
+            <Typography
+              variant="subtitle2"
+              color="text.secondary"
+              textAlign={"center"}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "bold",
+                marginBottom: "15px",
+              }}
+            >
+              <Link
+                to="https://github.com/Abdusaleh27/ElectronicsHaven"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="special-links">
+                  Project github repository{" "}
+                </span>
+              </Link>
+            </Typography>
             <h5>Let's innovate together!</h5>
           </CardContent>
         </Card>

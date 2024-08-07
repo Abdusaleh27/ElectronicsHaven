@@ -36,6 +36,7 @@ const ContainerComponent = () => {
   const [emptyCart, setEmptyCart] = useState(false);
   const [combined, setCombined] = useState(false);
   const [rerender, setRerender] = useState(false);
+  const [showNavBar, setShowNavBar] = useState(true);
   /**Effects */
 
   /**
@@ -173,7 +174,7 @@ const ContainerComponent = () => {
    * combines the local and remote shopping lists when the user logs in
    * @param {array} list1
    * @param {array} list2
-   * @returns comibine list
+   * @returns combined list
    */
   const combineShoppingLists = (list1, list2) => {
     for (let i = 0; i < list1.length; i++) {
@@ -209,6 +210,10 @@ const ContainerComponent = () => {
    */
   const updateEmptyCart = (paid) => {
     setEmptyCart(paid);
+  };
+ 
+  const renderNavBar = (show) =>{
+    setShowNavBar(show);
   };
   return (
     <>
@@ -253,8 +258,8 @@ const ContainerComponent = () => {
               >
                 <BrowserRouter>
                   <>
-                    <NavigationBar cartCount={cartCount} />
-
+                    
+                    {showNavBar && <NavigationBar cartCount={cartCount} />}
                     <Routes>
                       <Route path="/" element={<MainPage />} />
                       <Route path="/search/:name/" element={<SearchPage />} />
@@ -294,9 +299,9 @@ const ContainerComponent = () => {
                       <Route path="/redirect/" element={<Redirect />} />
                       <Route path="*" element={<PageNotFound />} />
                     </Routes>
-                    <div className="wrapper row ">
+                    {showNavBar && <div className="wrapper row ">
                       <Footer></Footer>
-                    </div>
+                    </div>}
                   </>
                 </BrowserRouter>
               </UserDataContext.Provider>

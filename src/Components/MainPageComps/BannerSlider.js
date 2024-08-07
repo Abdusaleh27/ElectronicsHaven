@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import heroBG3 from "../../banners/heroBG3.jpg";
-import heroIMTP1 from "../../banners/heroIMGTP1.png";
-import heroIMTP2 from "../../banners/heroIMGTP2.png";
-import heroIMTP3 from "../../banners/heroIMGTP3.png";
-import heroIMTP4 from "../../banners/heroIMGTP4.png";
+import heroIMTP1 from "../../banners/heroIMGTP1_SM.png";
+import heroIMTP2 from "../../banners/heroIMGTP2_SM.png";
+import heroIMTP3 from "../../banners/heroIMGTP3_SM.png";
+import heroIMTP4 from "../../banners/heroIMGTP4_SM.png";
 import "./Styles/BannerSlider.css";
 import {
   Box,
   Chip,
   Grid,
+  Paper,
   Typography,
   useMediaQuery,
   useTheme,
@@ -29,6 +30,7 @@ const BannerSlider = () => {
   const mobileBreakPoint = useMediaQuery(theme.breakpoints.down("470"));
   const targetBreakPoint = useMediaQuery(theme.breakpoints.down("750"));
   const lgBreakPoint = useMediaQuery(theme.breakpoints.down("900"));
+  const customLarge = useMediaQuery(theme.breakpoints.down("lg"));
   const xlBreakPoint = useMediaQuery(theme.breakpoints.down("1575"));
   const xxlBreakPoint = useMediaQuery(theme.breakpoints.up("1575"));
   const [shiny, setShiny] = useState(true);
@@ -67,10 +69,7 @@ const BannerSlider = () => {
       <Box
         sx={{
           paddingBottom: targetBreakPoint ? "10px" : "20px",
-          marginTop:
-            (targetBreakPoint && "-80px") ||
-            
-            (xxlBreakPoint && "21px"),
+          marginTop: (lgBreakPoint && "-60px") || (xxlBreakPoint && "21px"),
           width: "100%",
           backgroundImage: `url(${heroBG3})`,
           backgroundSize: "100% 100%",
@@ -80,55 +79,62 @@ const BannerSlider = () => {
           <Grid
             item
             md={6}
+            xs={12}
             padding={
-              (mobileBreakPoint && "0 5%") ||
-              (targetBreakPoint && "0 15%") ||
-              (lgBreakPoint && " 0 5%") ||
-              (xlBreakPoint && " 0 10%") ||
-              (xxlBreakPoint && " 0 15%")
+              (mobileBreakPoint && "0 0%") ||
+              // (targetBreakPoint && "0 15%") ||
+              (customLarge && " 0 3%") ||
+              (xlBreakPoint && " 0 3%") ||
+              (xxlBreakPoint && " 0 3%")
             }
+            my={"auto"}
           >
             <Box
               maxWidth={
-                (targetBreakPoint && "100%") ||
-                (lgBreakPoint && "300px") ||
-                (xlBreakPoint && "400px") ||
-                (xxlBreakPoint && "600px")
+                (mobileBreakPoint && "360px") ||
+                (targetBreakPoint && "413px") ||
+                (lgBreakPoint && "495px") ||
+                (customLarge && "450px") ||
+                (xlBreakPoint && "700px") ||
+                (xxlBreakPoint && "700px")
               }
-              mt={20}
+              margin={lgBreakPoint && "auto"}
+              mt={ customLarge ? 20 : 15}
             >
-              <Typography
-                variant={lgBreakPoint ? "h6" : "h5"}
-                color="#ff4d02"
-                textAlign={"left"}
-                marginBottom={"15px"}
-                fontSize={
-                  (mobileBreakPoint && "20px") ||
-                  (targetBreakPoint && "22px") ||
-                  (lgBreakPoint && "21px") ||
-                  (xlBreakPoint && " 24px") ||
-                  (xxlBreakPoint && "25px")
-                }
-              >
-                Check out our Huge Collection
-              </Typography>
+                <Typography
+                  color="#ffdd01"
+                  textAlign={lgBreakPoint ? "center" : "left"}
+                  marginBottom={"15px"}
+                  fontSize={
+                    (mobileBreakPoint && "25.5px") ||
+                    (targetBreakPoint && "29px") ||
+                    (lgBreakPoint && "34px") ||
+                    (customLarge && "27.6px") ||
+                    (xlBreakPoint && " 37px") ||
+                    (xxlBreakPoint && "47.8px")
+                  }
+                  
+                >
+                  Check Out Our Huge Collection
+                </Typography>
               <Typography
                 variant="body2"
                 color={"white"}
-                textAlign={"left"}
-                marginBottom={targetBreakPoint ? "" : "40px"}
-                fontSize={targetBreakPoint ? 13 : 17}
+                textAlign={mobileBreakPoint ? "center" : "left"}
+                marginBottom={lgBreakPoint ? "20px" : "25px"}
+                fontSize={targetBreakPoint ? 15.5 : 20}
               >
                 Discover the latest and greatest electronics from smartphones to
                 laptops, we have everything you need to stay connected and
                 entertained.
               </Typography>
+
               <Typography
                 variant="body2"
-                color={"#f38842"}
-                textAlign={"left"}
-                marginBottom={targetBreakPoint ? "" : "18px"}
-                fontSize={targetBreakPoint ? 15 : 19}
+                color={"#ffdd01"}
+                textAlign={lgBreakPoint ? "center" : "left"}
+                marginBottom={lgBreakPoint ? "" : "18px"}
+                fontSize={targetBreakPoint ? 17 : 19}
                 mt={1}
               >
                 By Abdullah Saleh
@@ -138,9 +144,9 @@ const BannerSlider = () => {
           <Grid
             item
             md={6}
-            mt={targetBreakPoint ? 5 : 10}
-            padding={targetBreakPoint && "0 25%"}
-            marginTop={(targetBreakPoint && "25px") || "80px"}
+            xs={12}
+            mt={lgBreakPoint ? 5 : 10}
+            marginTop={(lgBreakPoint && "25px") || "80px"}
           >
             <Chip
               label="Featured products"
@@ -148,11 +154,9 @@ const BannerSlider = () => {
               color="error"
               sx={{
                 marginRight: xxlBreakPoint && "28%",
-                marginLeft:
-                  (mobileBreakPoint && "15%") || (targetBreakPoint && "35%"),
               }}
             ></Chip>
-            {!targetBreakPoint ? (
+            {!lgBreakPoint ? (
               <>
                 <div className="row mt-3">
                   <div
@@ -168,11 +172,11 @@ const BannerSlider = () => {
                       padding={"10px"}
                       marginBottom={"25px"}
                     >
-                      <Link to="productdetails/sku6560070">
+                      <Link to="productdetails/sku6560081">
                         <img
                           src={heroIMTP1}
                           className="img-fluid"
-                          alt="hero1"
+                          alt="applewatch"
                         ></img>
                       </Link>
                     </Box>
@@ -189,11 +193,11 @@ const BannerSlider = () => {
                       className={`herobanner-image ${shiny2 ? "wrap" : ""}`}
                       padding={"15px"}
                     >
-                      <Link to="productdetails/sku6543821">
+                      <Link to="productdetails/sku6562707">
                         <img
                           src={heroIMTP3}
                           className="img-fluid"
-                          alt="hero2"
+                          alt="steelseries"
                         ></img>
                       </Link>
                     </Box>
@@ -212,11 +216,11 @@ const BannerSlider = () => {
                       className={`herobanner-image ${shiny2 ? "wrap" : ""}`}
                       padding={"15px"}
                     >
-                      <Link to="productdetails/sku6512838">
+                      <Link to="productdetails/sku6586745">
                         <img
                           src={heroIMTP2}
                           className="img-fluid"
-                          alt="hero2"
+                          alt="galaxyfold"
                         ></img>
                       </Link>
                     </Box>
@@ -224,7 +228,7 @@ const BannerSlider = () => {
                   <div
                     className={`${
                       xxlBreakPoint
-                        ? "justify-content-left "
+                        ? "justify-content-left  tv"
                         : " justify-content-center"
                     } d-flex col-6`}
                   >
@@ -238,7 +242,7 @@ const BannerSlider = () => {
                         <img
                           src={heroIMTP4}
                           className="img-fluid"
-                          alt="hero2"
+                          alt="tv"
                         ></img>
                       </Link>
                     </Box>
@@ -250,7 +254,7 @@ const BannerSlider = () => {
             )}
           </Grid>
         </Grid>
-        {targetBreakPoint && <HeroSwiper></HeroSwiper>}
+        {lgBreakPoint && <HeroSwiper></HeroSwiper>}
       </Box>
     </>
   );

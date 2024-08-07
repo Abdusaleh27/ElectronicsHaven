@@ -6,6 +6,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import "./Styles/Footer.css";
+import { GitHub } from "@mui/icons-material";
 const Footer = () => {
   /**
    * Hooks
@@ -64,16 +65,26 @@ const Footer = () => {
           </Typography>
         </div>
         <div className="col mt-4">
-          <a href="https://www.linkedin.com/in/ahsaleh27">
+          <Link
+            to="https://www.linkedin.com/in/ahsaleh27/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Typography color={"white"}>
               <LinkedInIcon />
             </Typography>
-          </a>
+          </Link>
+          <Link
+            to="https://github.com/Abdusaleh27/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Typography color={"white"}>
+              <GitHub />
+            </Typography>
+          </Link>
           <Typography color={"white"}>
             <FacebookIcon />
-          </Typography>
-          <Typography color={"white"}>
-            <InstagramIcon />
           </Typography>
           <Typography color={"white"}>
             <TwitterIcon />
